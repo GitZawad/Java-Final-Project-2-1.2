@@ -1,1 +1,109 @@
-# Java-Final-Project-2-1.2
+# Finance Management System
+
+A Java-based Finance Management System designed to allow users to track their income, expenditure, and balance, with distinct roles for administrators and users. The system is backed by a MySQL database and allows for various management tasks, including user and category management.
+
+## Features
+
+- **Admin Role:**
+  - **User Management:** Create, delete, and view users.
+  - **Category Management:** Add and view income and expenditure categories.
+  
+- **User Role:**
+  - **Record Management:** Add income and expenditure records.
+  - **Balance Calculation:** Calculate total income, expenditure, and balance.
+  - **View Records:** View added income and expenditure records.
+
+## Technologies Used
+
+- **Java**: Core programming language for developing the application.
+- **MySQL**: Database for storing users, records, categories, and other related data.
+- **JDBC**: Java Database Connectivity for interacting with the MySQL database.
+
+## Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/your-username/finance-management.git
+   ```
+
+2. **Set up MySQL Database:**
+
+   - Create a database named `finance_db`.
+   - Run the following SQL queries to set up the required tables:
+
+   ```sql
+   CREATE TABLE users (
+       user_id VARCHAR(50) PRIMARY KEY,
+       password VARCHAR(100),
+       role VARCHAR(50)
+   );
+
+   CREATE TABLE categories (
+       category_id INT AUTO_INCREMENT PRIMARY KEY,
+       name VARCHAR(100),
+       type VARCHAR(50)
+   );
+
+   CREATE TABLE records (
+       record_id INT AUTO_INCREMENT PRIMARY KEY,
+       user_id VARCHAR(50),
+       category_id INT,
+       amount DOUBLE,
+       record_date DATE,
+       FOREIGN KEY (user_id) REFERENCES users(user_id),
+       FOREIGN KEY (category_id) REFERENCES categories(category_id)
+   );
+   ```
+
+3. **Configure Database Credentials:**
+   - In the `Main` class, replace the database credentials in the following line with your own:
+   
+   ```java
+   connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/finance_db", "root", "password");
+   ```
+
+4. **Run the Application:**
+
+   - Compile and run the `Main` class to start the application.
+
+   ```bash
+   javac FinanceApp/Main/Main.java
+   java FinanceApp.Main.Main
+   ```
+
+## Usage
+
+### Roles:
+- **Administrator**:
+  - Login as an admin to manage users and categories.
+  - Options to create, delete, and view users.
+  - Manage income and expenditure categories.
+  
+- **User**:
+  - Login with a user account to manage personal records.
+  - Add income and expenditure records.
+  - View records and calculate total income, expenditure, and balance.
+
+### Example Flow:
+1. **Login**: Enter your user ID and password.
+2. **Menu**:
+   - **Admin**: Choose between user management, income category management, or expenditure category management.
+   - **User**: Choose between adding income/expenditure records, viewing records, or calculating balance.
+
+## Structure
+
+The project is organized into several packages:
+
+- **`FinanceApp.Main`**: Main application flow and role-based login.
+- **`FinanceApp.Models.Admin`**: Admin functionality (user management, category management).
+- **`FinanceApp.Models.User`**: User functionality (record management, balance calculation).
+- **`FinanceApp.Models.User.RecordManagement`**: Specific operations related to user records (adding/viewing income and expenditure).
+
+## Contribution
+
+Feel free to fork the repository, make improvements, and submit pull requests. Contributions are welcome!
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
