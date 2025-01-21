@@ -1,6 +1,6 @@
 # Finance Management System
 
-A Java-based Finance Management System designed to allow users to track their income, expenditure, and balance, with distinct roles for administrators and users. The system is backed by a MySQL database and allows for various management tasks, including user and category management.
+A Java-based Finance Management System designed to allow users to track their income, expenditure, and balance, with distinct roles for administrators and users. The system is backed by a MySQL database and allows for various management tasks, including user and category management. This project was done during my first semester of the second year of undergraduation of software engineering. This college project was provided by the university as the final project of the Object Oriented Programming(OOP) Techniques along with three other projects. We were required to select one of the topic for the submission of the project.
 
 ## Features
 
@@ -104,6 +104,3 @@ The project is organized into several packages:
 
 Feel free to fork the repository, make improvements, and submit pull requests. Contributions are welcome!
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
