@@ -96,33 +96,7 @@ A Java-based Finance Management System designed to allow users to track their in
 Here's the relation between the different packages and classes to organize the whole project
 
 
-src/
-├── FinanceApp/
-│   ├── Main/
-│   │   └── Main.java                    # Entry point of the application.
-│   │   └── Role.java                    # Contains common roles logic.
-│   ├── Models/
-│   │   ├── Admin/
-│   │   │   ├── CategoryManagement/
-│   │   │   │   ├── Create.java          # Handles category creation for admin.
-│   │   │   │   ├── Expenditure.java     # Manages expenditure-related tasks for admin.
-│   │   │   │   ├── Income.java          # Manages income-related tasks for admin.
-│   │   │   │   └── View.java            # Provides category-related views for admin.
-│   │   │   ├── UserManagement/
-│   │   │   │   ├── CreateUser.java      # Allows admin to create new users.
-│   │   │   │   ├── DeleteUser.java      # Allows admin to delete existing users.
-│   │   │   │   ├── UserManagement.java  # Main management interface for users by admin.
-│   │   │   │   ├── ViewUsers.java       # Allows admin to view all users.
-│   │   │   ├── AdminMenu.java           # Admin menu interface.
-│   │   │   └── AdminRole.java           # Defines the admin role and permissions.
-│   │   └── User/
-│   │       ├── RecordManagement/
-│   │       │   ├── Income.java          # Handles income record management for users.
-│   │       │   ├── Expenditure.java     # Handles expenditure record management for users.
-│   │       │   ├── View.java            # Allows users to view their records.
-│   │       │   └── CalculateBalance.java# Calculates user's financial balance.
-│   │       ├── UserMenu.java            # Provides user-specific menu options.
-│   │       └── UserRole.java            # Defines the user role and permissions.
+src/ ├── FinanceApp/ │ ├── Main/ │ │ ├── Main.java # Entry point of the application. │ │ └── Role.java # Contains common roles logic. │ ├── Models/ │ │ ├── Admin/ │ │ │ ├── CategoryManagement/ │ │ │ │ ├── Create.java # Handles category creation for admin. │ │ │ │ ├── Expenditure.java # Manages expenditure-related tasks for admin. │ │ │ │ ├── Income.java # Manages income-related tasks for admin. │ │ │ │ └── View.java # Provides category-related views for admin. │ │ │ ├── UserManagement/ │ │ │ │ ├── CreateUser.java # Allows admin to create new users. │ │ │ │ ├── DeleteUser.java # Allows admin to delete existing users. │ │ │ │ ├── UserManagement.java # Main management interface for users by admin. │ │ │ │ └── ViewUsers.java # Allows admin to view all users. │ │ │ ├── AdminMenu.java # Admin menu interface. │ │ │ └── AdminRole.java # Defines the admin role and permissions. │ │ └── User/ │ │ ├── RecordManagement/ │ │ │ ├── Income.java # Handles income record management for users. │ │ │ ├── Expenditure.java # Handles expenditure record management for users. │ │ │ ├── View.java # Allows users to view their records. │ │ │ └── CalculateBalance.java# Calculates user's financial balance. │ │ ├── UserMenu.java # Provides user-specific menu options. │ │ └── UserRole.java # Defines the user role and permissions.
 
 
 The project is organized into several packages:
